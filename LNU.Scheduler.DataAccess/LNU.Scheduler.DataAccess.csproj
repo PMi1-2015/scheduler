@@ -55,13 +55,19 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
     <Compile Include="SchedulerContext.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LNU.Scheduler.Contracts\LNU.Scheduler.Contracts.csproj">
+      <Project>{3c886a22-c501-4d03-9dbb-62f0b0800e43}</Project>
+      <Name>LNU.Scheduler.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LNU.Scheduler.Models\LNU.Scheduler.Models.csproj">
       <Project>{1d23108d-76a1-4c95-8e11-267248380fa9}</Project>
       <Name>LNU.Scheduler.Models</Name>

@@ -1,9 +1,9 @@
 ﻿namespace LNU.Scheduler.Models
-{ 
+{
     /// <summary>
-    /// Teacher for the lecture
+    /// University group entity
     /// </summary>
-    public class Teacher
+    public class Group
     {
         /// <summary>
         /// Unique id
@@ -11,7 +11,7 @@
         public int Id { get; set; }
 
         /// <summary>
-        /// Teachers Name
+        /// Like Pmi-31
         /// </summary>
         public string Name { get; set; }
     }

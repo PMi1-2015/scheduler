@@ -1,9 +1,9 @@
 ﻿namespace LNU.Scheduler.Models
-{ 
+{
     /// <summary>
-    /// Teacher for the lecture
+    /// Room in which lectures is conducted
     /// </summary>
-    public class Teacher
+    public class Room
     {
         /// <summary>
         /// Unique id
@@ -11,8 +11,8 @@
         public int Id { get; set; }
 
         /// <summary>
-        /// Teachers Name
+        /// Room number (e.g., 439)
         /// </summary>
-        public string Name { get; set; }
+        public int Number { get; set; }
     }
 }

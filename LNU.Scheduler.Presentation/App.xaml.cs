@@ -1,4 +1,8 @@
-﻿using System;
+﻿using LNU.Scheduler.Contracts;
+using LNU.Scheduler.DataAccess;
+using LNU.Scheduler.Models;
+using Microsoft.Practices.Unity;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +17,16 @@ namespace LNU.Scheduler.Presentation
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var container = new UnityContainer();
+
+            var unitOfWork = new UnitOfWork();
+            container.RegisterInstance<IUnitOfWork<Room>>(unitOfWork);
+
+            container.Resolve<MainWindow>();
+        }
     }
 }
