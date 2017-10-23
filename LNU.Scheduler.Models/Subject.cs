@@ -1,10 +1,17 @@
-﻿namespace LNU.Scheduler.Models
-{ 
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+namespace LNU.Scheduler.Models
+{
     /// <summary>
     /// Subject for the lecture
     /// </summary>
     public class Subject
     {
+        public Subject()
+        {
+            this.Teachers = new HashSet<Teacher>();
+        }
         /// <summary>
         /// Unique id
         /// </summary>
@@ -16,14 +23,8 @@
         public string Name { get; set; }
 
         /// <summary>
-        /// Teacher for the lecture
+        /// All teachers that can conduct this lecture
         /// </summary>
-        public Teacher Teacher { get; set; }
-        public int TeacherId { get; set; }
-
-        /// <summary>
-        /// Number of this subject as lectures per week
-        /// </summary>
-        public int NumberPerWeek { get; set; }
+        public ICollection<Teacher> Teachers { get; set;}
     }
 }

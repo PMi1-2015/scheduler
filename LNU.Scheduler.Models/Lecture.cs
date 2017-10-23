@@ -31,8 +31,18 @@ namespace LNU.Scheduler.Models
         public int RoomId { get; set; }
 
         /// <summary>
+        /// What teacher conducts the lecture
+        /// </summary>
+        public Teacher Teacher { get; set; }
+        public int TeacherId { get; set; }
+        /// <summary>
         /// In which room lecture
         /// </summary>
         public WeekDays WeekDay { get; set; }
+
+        /// <summary>
+        /// Number of lecture in this day
+        /// </summary>
+        public int Number { get; set; }
     }
 }
