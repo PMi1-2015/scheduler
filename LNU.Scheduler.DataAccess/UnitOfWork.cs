@@ -25,7 +25,6 @@ namespace LNU.Scheduler.DataAccess
         {
             get
             {
-
                 _lectureRepository = _lectureRepository ?? new Repository<Lecture>(_context);
 
                 return _lectureRepository;
@@ -36,7 +35,6 @@ namespace LNU.Scheduler.DataAccess
         {
             get
             {
-
                 _roomRepository = _roomRepository ?? new Repository<Room>(_context);
 
                 return _roomRepository;

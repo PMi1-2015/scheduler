@@ -9,7 +9,7 @@ namespace LNU.Scheduler.DataAccess.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(LNU.Scheduler.DataAccess.SchedulerContext context)

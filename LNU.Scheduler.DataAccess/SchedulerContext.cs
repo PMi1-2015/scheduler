@@ -6,6 +6,10 @@ namespace LNU.Scheduler.DataAccess
     public class SchedulerContext : 
         DbContext
     {
+        public SchedulerContext()
+            : base("name=Connection")
+        {
+        }
         public DbSet<Subject> Subjects { get; set; }
 
         public DbSet<Teacher> Teachers { get; set; }
@@ -15,5 +19,7 @@ namespace LNU.Scheduler.DataAccess
         public DbSet<Room> Rooms { get; set; }
 
         public DbSet<Lecture> Lectures { get; set; }
+
+        public DbSet<SubjectPerWeek> SubjectsPerWeek { get; set; }
     }
 }
