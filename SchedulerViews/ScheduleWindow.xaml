@@ -1,0 +1,20 @@
+﻿<Window x:Class="SchedulerViews.ScheduleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SchedulerViews"
+        mc:Ignorable="d"
+        Title="ScheduleWindow" Height="500" Width="800">
+    <Grid Background="#FFB5C9DC">
+
+        <UniformGrid Rows="1" Columns="4" Height="50" Margin="0,0,0,419" Background="#FF505589">
+            <Button Content="Teacher Manager" Click="OpenTeacherManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
+            <Button Content="Room Manager" Click="OpenRoomManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
+            <Button Content="Subject Manager" Click="OpenSubjectManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
+            <Button Content="Group Manager" Click="OpenGroupManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
+        </UniformGrid>
+        
+        <Button Content="Save Schedule" HorizontalAlignment="Left" Margin="310,59,0,0" VerticalAlignment="Top" Width="172" Height="44"/>
+    </Grid>
+</Window>
