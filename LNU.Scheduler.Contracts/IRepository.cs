@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 
 namespace LNU.Scheduler.Contracts
 {
@@ -12,7 +14,7 @@ namespace LNU.Scheduler.Contracts
         /// Getting all elements with type T
         /// </summary>
         /// <returns>All elements</returns>
-        IEnumerable<T> GetAll();
+        IEnumerable<T> GetAll(Expression<Func<T, bool>> where);
 
         /// <summary>
         /// Getting element by id
