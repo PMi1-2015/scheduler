@@ -2,6 +2,8 @@
 using System.Data.Entity;
 using System.Linq;
 using LNU.Scheduler.Contracts;
+using System.Linq.Expressions;
+using System;
 
 namespace LNU.Scheduler.DataAccess
 {
@@ -41,12 +43,13 @@ namespace LNU.Scheduler.DataAccess
         }
 
         /// <summary>
-        /// Getting all elements with type T
+        /// Take items based on where condition
         /// </summary>
-        /// <returns>All elements</returns>
-        public IEnumerable<T> GetAll()
+        /// <param name="where">where clause by which take items</param>
+        /// <returns>list of items that specifies certain condition</returns>
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>> where)
         {
-            return _dbSet.ToList();
+            return _dbSet.Where(where).ToList();
         }
 
         /// <summary>
@@ -69,6 +72,10 @@ namespace LNU.Scheduler.DataAccess
             _context.Entry(entity).State = EntityState.Modified;
         }
 
+        /// <summary>
+        /// Deletes entity
+        /// </summary>
+        /// <param name="entityToDelete">entity to delete</param>
         private void Delete(T entityToDelete)
         {
             if (_context.Entry(entityToDelete).State == EntityState.Detached)
