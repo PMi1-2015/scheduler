@@ -1,32 +1,27 @@
-﻿using LNU.Scheduler.Contracts;
-using LNU.Scheduler.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 
 namespace LNU.Scheduler.Presentation
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ScheduleWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ScheduleWindow : Window
     {
-        public MainWindow()
+        public ScheduleWindow()
         {
-        }
-
-        public MainWindow(IUnitOfWork<Room> test)
-        {
-            // TODO: remove test code
-            test.Repository.Add(new Room() {Number = 42});
-            test.Save();
-            // End
-
             InitializeComponent();
-        }
-
-        public void OpenScheduleWindow(object sender, RoutedEventArgs e)
-        {
-            var window = new ScheduleWindow();
-            window.Show();
         }
 
         public void OpenTeacherManagerWindow(object sender, RoutedEventArgs e)
