@@ -17,7 +17,7 @@ namespace LNU.Scheduler.Presentation
         {
             // TODO: remove test code
             //test.Repository.Add(new Room() {Number = 42});
-            //test.Save();
+            //test.Save();           
             // End
 
             InitializeComponent();
