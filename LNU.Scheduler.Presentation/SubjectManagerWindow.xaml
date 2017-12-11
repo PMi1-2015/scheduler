@@ -1,0 +1,26 @@
+﻿<Window x:Class="LNU.Scheduler.Presentation.SubjectManagerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LNU.Scheduler.Presentation"
+        mc:Ignorable="d"
+        Title="SubjectManagerWindow"  Height="500" Width="600">
+    <Grid Background="#FFB5C9DC">
+        <Label Content="Subjects" HorizontalAlignment="Left" Margin="281,10,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+
+        <TextBox Width="200" Margin="206,129,186,310" Height="30" FontSize="16"></TextBox>
+
+        <Button Content="Add" HorizontalAlignment="Left" Margin="264,176,0,0" VerticalAlignment="Top" FontFamily="Comic Sans MS" Width="75"/>
+        <Label Content="Subject name" HorizontalAlignment="Left" Margin="264,81,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+        <Label Content="Subject name" HorizontalAlignment="Left" Margin="141,227,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="319,233,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="409,233,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Subject name" HorizontalAlignment="Left" Margin="141,293,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="319,293,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="409,293,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="359,381,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Click="CloseWindow" HorizontalAlignment="Left" FontFamily="Comic Sans MS" Margin="158,381,0,0" VerticalAlignment="Top" Width="75"/>
+
+    </Grid>
+</Window>

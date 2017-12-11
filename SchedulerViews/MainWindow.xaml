@@ -1,11 +1,11 @@
-﻿<Window x:Class="LNU.Scheduler.Presentation.MainWindow"
+﻿<Window x:Class="SchedulerViews.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:LNU.Scheduler.Presentation"
+        xmlns:local="clr-namespace:SchedulerViews"
         mc:Ignorable="d"
-        Title="MainWindow"  Height="500" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid Background="#FFB5C9DC">
 
         <UniformGrid Rows="1" Columns="4" Height="50" Margin="0,0,0,419" Background="#FF505589">
@@ -26,6 +26,6 @@
             <ScrollBar x:Name="ScrollBar" HorizontalAlignment="Left" Margin="81,0,0,0" VerticalAlignment="Top" Height="200" Grid.Column="1"/>
         </Grid>
         <Label Content="Select group" HorizontalAlignment="Left" Margin="316,71.53,0,0" VerticalAlignment="Top" Width="172" FontSize="26.667" FontFamily="Comic Sans MS"/>
-        <Button Content="Create Schedule" Click="OpenScheduleWindow" HorizontalAlignment="Left" Margin="316,389,0,0" VerticalAlignment="Top" Width="172" Height="44" FontFamily="Comic Sans MS" />
+        <Button Content="Create Schedule" Click="OpenScheduleWindow" HorizontalAlignment="Left" Margin="316,389,0,0" VerticalAlignment="Top" Width="172" Height="44"/>
     </Grid>
 </Window>
