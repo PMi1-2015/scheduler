@@ -16,8 +16,8 @@ namespace LNU.Scheduler.Presentation
         public MainWindow(IUnitOfWork<Room> test)
         {
             // TODO: remove test code
-            test.Repository.Add(new Room() {Number = 42});
-            test.Save();
+            //test.Repository.Add(new Room() {Number = 42});
+            //test.Save();
             // End
 
             InitializeComponent();

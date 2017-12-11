@@ -26,6 +26,6 @@
             <ScrollBar x:Name="ScrollBar" HorizontalAlignment="Left" Margin="81,0,0,0" VerticalAlignment="Top" Height="200" Grid.Column="1"/>
         </Grid>
         <Label Content="Select group" HorizontalAlignment="Left" Margin="316,71.53,0,0" VerticalAlignment="Top" Width="172" FontSize="26.667" FontFamily="Comic Sans MS"/>
-        <Button Content="Create Schedule" Click="OpenScheduleWindow" HorizontalAlignment="Left" Margin="316,389,0,0" VerticalAlignment="Top" Width="172" Height="44"/>
+        <Button Content="Create Schedule" Click="OpenScheduleWindow" HorizontalAlignment="Left" Margin="316,389,0,0" VerticalAlignment="Top" Width="172" Height="44" FontFamily="Comic Sans MS" />
     </Grid>
 </Window>

@@ -7,26 +7,26 @@
         mc:Ignorable="d"
         Title="TeacherManagerWindow" Height="500" Width="800">
     <Grid Background="#FFB5C9DC">
-        <Label Content="Teachers" HorizontalAlignment="Left" Margin="380,10,0,0" VerticalAlignment="Top"/>
-        <TextBox Width="200" Margin="253,134,339,305" Height="50" FontSize="16"></TextBox>
+        <Label Content="Teachers" HorizontalAlignment="Left" Margin="380,10,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <TextBox Width="200" Margin="253,134,339,305" Height="50" FontSize="16" ></TextBox>
         <TextBox Width="200" Margin="30,134,562,305" Height="50" FontSize="16"></TextBox>
         <TextBox Width="200" Margin="475,134,117,305" Height="50" FontSize="16"/>
         <Button Content="Add" HorizontalAlignment="Left" Margin="690,140,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="First name" HorizontalAlignment="Left" Margin="102,77,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last name" HorizontalAlignment="Left" Margin="330,77,0,0" VerticalAlignment="Top"/>
-        <Label Content="Subjects" HorizontalAlignment="Left" Margin="538,77,0,0" VerticalAlignment="Top"/>
-        <Label Content="First name" HorizontalAlignment="Left" Margin="50,205,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last name" HorizontalAlignment="Left" Margin="278,213,0,0" VerticalAlignment="Top"/>
-        <Label Content="Subjects" HorizontalAlignment="Left" Margin="475,213,0,0" VerticalAlignment="Top"/>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="565,213,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="655,213,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="First name" HorizontalAlignment="Left" Margin="50,275,0,0" VerticalAlignment="Top"/>
-        <Label Content="Last name" HorizontalAlignment="Left" Margin="278,273,0,0" VerticalAlignment="Top"/>
-        <Label Content="Subjects" HorizontalAlignment="Left" Margin="475,273,0,0" VerticalAlignment="Top"/>
-        <Button Content="Edit" HorizontalAlignment="Left" Margin="565,273,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Delete" HorizontalAlignment="Left" Margin="655,273,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Ok" HorizontalAlignment="Left" Margin="454,383,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Cancel" Click="CloseWindow" HorizontalAlignment="Left" Margin="253,383,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="First name" HorizontalAlignment="Left" Margin="102,77,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
+        <Label Content="Last name" HorizontalAlignment="Left" Margin="330,77,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Label Content="Subjects" HorizontalAlignment="Left" Margin="538,77,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Label Content="First name" HorizontalAlignment="Left" Margin="50,205,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Label Content="Last name" HorizontalAlignment="Left" Margin="278,213,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Label Content="Subjects" HorizontalAlignment="Left" Margin="475,213,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="565,213,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top" Width="75"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="655,213,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top" Width="75"/>
+        <Label Content="First name" HorizontalAlignment="Left" Margin="50,275,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Label Content="Last name" HorizontalAlignment="Left" Margin="278,273,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Label Content="Subjects" HorizontalAlignment="Left" Margin="475,273,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top"/>
+        <Button Content="Edit" HorizontalAlignment="Left" Margin="565,273,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top" Width="75"/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="655,273,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="454,383,0,0" FontFamily="Comic Sans MS"  VerticalAlignment="Top" Width="75"/>
+        <Button Content="Cancel" Click="CloseWindow" HorizontalAlignment="Left" FontFamily="Comic Sans MS"  Margin="253,383,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

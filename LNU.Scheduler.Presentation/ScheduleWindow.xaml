@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LNU.Scheduler.Presentation"
         mc:Ignorable="d"
-        Title="ScheduleWindow" Height="500" Width="800">
+        Title="ScheduleWindow" Height="500" Width="805">
     <Grid Background="#FFB5C9DC">
 
         <UniformGrid Rows="1" Columns="4" Height="50" Margin="0,0,0,419" Background="#FF505589">
@@ -15,42 +15,42 @@
             <Button Content="Group Manager" Click="OpenGroupManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
         </UniformGrid>
 
-        <Button Content="Save Schedule" HorizontalAlignment="Left" Margin="310,59,0,0" VerticalAlignment="Top" Width="172" Height="44"/>
-        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,174,0,0"/>
-        <Label x:Name="label1" Content="Monday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,126,0,0" Width="88"/>
-        <Label x:Name="label_Copy4" Content="Tuesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="207,126,0,0" Width="88"/>
-        <Label x:Name="label_Copy5" Content="Wednesday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="371,126,0,0" Width="88"/>
-        <Label x:Name="label_Copy6" Content="Thursday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="541,126,0,0" Width="88"/>
-        <Label x:Name="label_Copy7" Content="Friday" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="694,126,0,0" Width="88"/>
-        <ComboBox x:Name="comboBox_Copy11" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,211,0,0"/>
-        <ComboBox x:Name="comboBox_Copy12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,248,0,0"/>
-        <ComboBox x:Name="comboBox_Copy13" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,286,0,0"/>
-        <ComboBox x:Name="comboBox_Copy14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,323,0,0"/>
-        <ComboBox x:Name="comboBox_Copy15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,360,0,0"/>
-        <ComboBox x:Name="comboBox_Copy16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,174,0,0"/>
-        <ComboBox x:Name="comboBox_Copy17" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,211,0,0"/>
-        <ComboBox x:Name="comboBox_Copy18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,248,0,0"/>
-        <ComboBox x:Name="comboBox_Copy19" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,286,0,0"/>
-        <ComboBox x:Name="comboBox_Copy20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,323,0,0"/>
-        <ComboBox x:Name="comboBox_Copy21" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,360,0,0"/>
-        <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,174,0,0"/>
-        <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,211,0,0"/>
-        <ComboBox x:Name="comboBox_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,248,0,0"/>
-        <ComboBox x:Name="comboBox_Copy3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,286,0,0"/>
-        <ComboBox x:Name="comboBox_Copy4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,323,0,0"/>
-        <ComboBox x:Name="comboBox_Copy5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,360,0,0"/>
-        <ComboBox x:Name="comboBox_Copy6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,174,0,0"/>
-        <ComboBox x:Name="comboBox_Copy7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,211,0,0"/>
-        <ComboBox x:Name="comboBox_Copy8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,248,0,0"/>
-        <ComboBox x:Name="comboBox_Copy9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,286,0,0"/>
-        <ComboBox x:Name="comboBox_Copy10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,323,0,0"/>
-        <ComboBox x:Name="comboBox_Copy22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,360,0,0"/>
-        <ComboBox x:Name="comboBox_Copy23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,174,0,0"/>
-        <ComboBox x:Name="comboBox_Copy24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,211,0,0"/>
-        <ComboBox x:Name="comboBox_Copy25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,248,0,0"/>
-        <ComboBox x:Name="comboBox_Copy26" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,286,0,0"/>
-        <ComboBox x:Name="comboBox_Copy27" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,323,0,0"/>
-        <ComboBox x:Name="comboBox_Copy28" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,360,0,0"/>
+        <Button Content="Save Schedule" HorizontalAlignment="Left" Margin="312,391,0,0" VerticalAlignment="Top" Width="172" Height="44"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,146,0,0"/>
+        <Label x:Name="label1" Content="Monday" HorizontalAlignment="Left" FontFamily="Comic Sans MS" VerticalAlignment="Top" Margin="42,98,0,0" Width="88"/>
+        <Label x:Name="label_Copy4" Content="Tuesday" HorizontalAlignment="Left" FontFamily="Comic Sans MS" VerticalAlignment="Top" Margin="207,98,0,0" Width="88"/>
+        <Label x:Name="label_Copy5" Content="Wednesday" HorizontalAlignment="Left" FontFamily="Comic Sans MS" VerticalAlignment="Top" Margin="371,98,0,0" Width="88"/>
+        <Label x:Name="label_Copy6" Content="Thursday" HorizontalAlignment="Left" FontFamily="Comic Sans MS" VerticalAlignment="Top" Margin="541,98,0,0" Width="88"/>
+        <Label x:Name="label_Copy7" Content="Friday" HorizontalAlignment="Left" FontFamily="Comic Sans MS" VerticalAlignment="Top" Margin="694,98,0,0" Width="88"/>
+        <ComboBox x:Name="comboBox_Copy11" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,183,0,0"/>
+        <ComboBox x:Name="comboBox_Copy12" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,220,0,0"/>
+        <ComboBox x:Name="comboBox_Copy13" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,258,0,0"/>
+        <ComboBox x:Name="comboBox_Copy14" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,295,0,0"/>
+        <ComboBox x:Name="comboBox_Copy15" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="10,332,0,0"/>
+        <ComboBox x:Name="comboBox_Copy16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,146,0,0"/>
+        <ComboBox x:Name="comboBox_Copy17" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,183,0,0"/>
+        <ComboBox x:Name="comboBox_Copy18" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,220,0,0"/>
+        <ComboBox x:Name="comboBox_Copy19" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,258,0,0"/>
+        <ComboBox x:Name="comboBox_Copy20" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,295,0,0"/>
+        <ComboBox x:Name="comboBox_Copy21" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="175,332,0,0"/>
+        <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,146,0,0"/>
+        <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,183,0,0"/>
+        <ComboBox x:Name="comboBox_Copy2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,220,0,0"/>
+        <ComboBox x:Name="comboBox_Copy3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,258,0,0"/>
+        <ComboBox x:Name="comboBox_Copy4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,295,0,0"/>
+        <ComboBox x:Name="comboBox_Copy5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="339,332,0,0"/>
+        <ComboBox x:Name="comboBox_Copy6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,146,0,0"/>
+        <ComboBox x:Name="comboBox_Copy7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,183,0,0"/>
+        <ComboBox x:Name="comboBox_Copy8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,220,0,0"/>
+        <ComboBox x:Name="comboBox_Copy9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,258,0,0"/>
+        <ComboBox x:Name="comboBox_Copy10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,295,0,0"/>
+        <ComboBox x:Name="comboBox_Copy22" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="509,332,0,0"/>
+        <ComboBox x:Name="comboBox_Copy23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,146,0,0"/>
+        <ComboBox x:Name="comboBox_Copy24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,183,0,0"/>
+        <ComboBox x:Name="comboBox_Copy25" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,220,0,0"/>
+        <ComboBox x:Name="comboBox_Copy26" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,258,0,0"/>
+        <ComboBox x:Name="comboBox_Copy27" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,295,0,0"/>
+        <ComboBox x:Name="comboBox_Copy28" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="662,332,0,0"/>
 
     </Grid>
 </Window>
