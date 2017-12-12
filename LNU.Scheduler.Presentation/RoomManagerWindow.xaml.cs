@@ -23,19 +23,12 @@ namespace LNU.Scheduler.Presentation
     public partial class RoomManagerWindow : Window
     {
         IUnitOfWork<Room> rooms;
-        public RoomManagerWindow(IUnitOfWork<Room> data)
-        {
-            InitializeComponent();
-            rooms = data;
-            foreach (var item in rooms.Repository.GetAll(x => true))
-            {
-                listRoom.Items.Add(item.Number);
-            }
-        }
-
+        bool edit;
+        
         public RoomManagerWindow()
         {
             InitializeComponent();
+            edit = false;
             rooms = new UnitOfWork();
             foreach (var item in rooms.Repository.GetAll(x => true))
             {
@@ -51,23 +44,15 @@ namespace LNU.Scheduler.Presentation
         private void addRoom_Click(object sender, RoutedEventArgs e)
         {
             int number = 0;
-            if (roomNumber.Text != string.Empty && Int32.TryParse(roomNumber.Text, out number))
+            if (roomNumber.Text != string.Empty && Int32.TryParse(roomNumber.Text, out number) && !edit)
             {
-                try
-                {
-                    rooms.Repository.Add(new Room() { Number = number });
-                    rooms.Save();
-                    listRoom.Items.Add(number);
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show("Error adding room.");
-                }
-                finally
-                {
-                    roomNumber.Text = string.Empty;
-                }
-            } else MessageBox.Show("Input correct number.");
+                AddRoom(number);
+            }
+            else if(edit && roomNumber.Text != string.Empty && Int32.TryParse(roomNumber.Text, out number))
+            {
+                EditRoom(number);
+            }
+            else MessageBox.Show("Input correct number.");
         }
 
         private void deleteRoom_Click(object sender, RoutedEventArgs e)
@@ -87,6 +72,57 @@ namespace LNU.Scheduler.Presentation
                 }
             }
             else MessageBox.Show("Select room in list.");
+        }
+
+        private void editRoom_Click(object sender, RoutedEventArgs e)
+        {
+            if (listRoom.SelectedItem != null)
+            {
+                edit = true;
+                roomNumber.Text = listRoom.SelectedItem.ToString();
+                addRoom.Content = "Edit";
+            }
+            else MessageBox.Show("Select room in list");
+        }
+
+        private void EditRoom(int number)
+        {
+            try
+            {
+                var room = rooms.Repository.GetAll(x => x.Number == (int)listRoom.SelectedItem).FirstOrDefault();
+                room.Number = number;
+                rooms.Repository.Update(room);
+                rooms.Save();
+                listRoom.Items[listRoom.SelectedIndex] = number;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error editing room");
+            }
+            finally
+            {
+                roomNumber.Text = string.Empty;
+                edit = false;
+                addRoom.Content = "Add";
+            }
+        }
+
+        private void AddRoom(int number)
+        {
+            try
+            {
+                rooms.Repository.Add(new Room() { Number = number });
+                rooms.Save();
+                listRoom.Items.Add(number);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding room.");
+            }
+            finally
+            {
+                roomNumber.Text = string.Empty;
+            }
         }
     }
 }

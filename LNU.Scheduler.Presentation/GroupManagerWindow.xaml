@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LNU.Scheduler.Presentation"
         mc:Ignorable="d"
-        Title="GroupManagerWindow" Height="500" Width="600">
+        Title="GroupManagerWindow" Height="500" ResizeMode="NoResize" Width="600">
     <Grid Background="#FFB5C9DC">
         <Label Content="Groups" HorizontalAlignment="Left" Margin="281,10,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="groupName" Width="200" Margin="206,129,186,310" Height="30" FontSize="16"></TextBox>
+        <TextBox x:Name="groupText" Width="200" Margin="206,129,186,310" Height="30" FontSize="16"></TextBox>
 
-        <Button x:Name="groupAdd" Click="groupAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="264,176,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="addGroup" Click="groupAdd_Click" Content="Add" HorizontalAlignment="Left" Margin="264,176,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
         <Label Content="Group name" HorizontalAlignment="Left" Margin="264,81,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
         <Button Content="Ok" HorizontalAlignment="Left" Margin="359,381,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
         <Button Content="Cancel" Click="CloseWindow"  HorizontalAlignment="Left" Margin="158,381,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top" Width="75"/>
         <ListBox x:Name="listGroups" HorizontalAlignment="Left" Background="#FFB5C9DC" Height="143" Margin="10,218,0,0" VerticalAlignment="Top" Width="263"/>
         <Button x:Name="deleteGroup" Click="deleteGroup_Click" Content="Delete" HorizontalAlignment="Left" Margin="374,264,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="editGroup" Click="editGroup_Click" Content="Edit" HorizontalAlignment="Left" Margin="374,310,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

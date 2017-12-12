@@ -23,12 +23,14 @@ namespace LNU.Scheduler.Presentation
     public partial class GroupManagerWindow : Window
     {
         IUnitOfWork<Group> groups;
+        bool edit;
         public GroupManagerWindow()
         {
             InitializeComponent();
             groups = new UnitOfWork();
             foreach (var item in groups.Repository.GetAll(x => true))
                 listGroups.Items.Add(item.Name);
+            edit = false;
         }
 
         public void CloseWindow(object sender, RoutedEventArgs e)
@@ -37,23 +39,14 @@ namespace LNU.Scheduler.Presentation
         }
 
         private void groupAdd_Click(object sender, RoutedEventArgs e)
-        {
-            if (groupName.Text != string.Empty)
+        {            
+            if (groupText.Text != string.Empty && !edit)
             {
-                try
-                {
-                    groups.Repository.Add(new Group() { Name = groupName.Text });
-                    groups.Save();
-                    listGroups.Items.Add(groupName.Text);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error adding new group");
-                }
-                finally
-                {
-                    groupName.Text = string.Empty;
-                }
+                AddGroup();
+            }
+            else if(groupText.Text != string.Empty && edit)
+            {
+                EditGroup();
             }
             else MessageBox.Show("Input correct name");
         }
@@ -79,6 +72,58 @@ namespace LNU.Scheduler.Presentation
                 }
             }
             else MessageBox.Show("Select group in list");
+        }
+
+        private void editGroup_Click(object sender, RoutedEventArgs e)
+        {
+            if (listGroups.SelectedItem != null)
+            {
+                edit = true;
+                groupText.Text = listGroups.SelectedItem.ToString();
+                addGroup.Content = "Edit";
+            }
+            else MessageBox.Show("Select subject in list");
+        }
+
+
+        private void EditGroup()
+        {
+            try
+            {
+                var group = groups.Repository.GetAll(x => x.Name == listGroups.SelectedItem.ToString()).FirstOrDefault();
+                group.Name = groupText.Text;
+                groups.Repository.Update(group);
+                groups.Save();
+                listGroups.Items[listGroups.SelectedIndex] = groupText.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error editing group");
+            }
+            finally
+            {
+                groupText.Text = string.Empty;
+                edit = false;
+                addGroup.Content = "Add";
+            }
+        }
+
+        private void AddGroup()
+        {
+            try
+            {
+                groups.Repository.Add(new Group() { Name = groupText.Text });
+                groups.Save();
+                listGroups.Items.Add(groupText.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding group.");
+            }
+            finally
+            {
+                groupText.Text = string.Empty;
+            }
         }
     }
 }

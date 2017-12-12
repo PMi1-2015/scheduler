@@ -23,12 +23,14 @@ namespace LNU.Scheduler.Presentation
     public partial class SubjectManagerWindow : Window
     {
         IUnitOfWork<Subject> subjects;
+        bool edit;
         public SubjectManagerWindow()
         {
             InitializeComponent();
             subjects = new UnitOfWork();
             foreach (var item in subjects.Repository.GetAll(x => true))
                 listSubjects.Items.Add(item.Name);
+            edit = false;
         }
 
         public void CloseWindow(object sender, RoutedEventArgs e)
@@ -38,22 +40,13 @@ namespace LNU.Scheduler.Presentation
 
         private void AddSubject_Click(object sender, RoutedEventArgs e)
         {
-            if (subjectText.Text != string.Empty)
+            if (subjectText.Text != string.Empty && !edit)
             {
-                try
-                {
-                    subjects.Repository.Add(new Subject { Name = subjectText.Text });
-                    subjects.Save();
-                    listSubjects.Items.Add(subjectText.Text);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error adding new subject.");
-                }
-                finally
-                {
-                    subjectText.Text = string.Empty;
-                }
+                AddSubjects();
+            }
+            else if(subjectText.Text != string.Empty && edit)
+            {
+                EditSubject();
             }
             else MessageBox.Show("Input correct name.");
         }
@@ -79,6 +72,58 @@ namespace LNU.Scheduler.Presentation
                 }
             }
             else MessageBox.Show("Select subject in list.");
+        }
+
+        private void editSubject_Click(object sender, RoutedEventArgs e)
+        {
+            if(listSubjects.SelectedItem != null)
+            {
+                edit = true;
+                subjectText.Text = listSubjects.SelectedItem.ToString();
+                AddSubject.Content = "Edit";
+            }
+            else MessageBox.Show("Select subject in list");
+        }
+
+
+        private void EditSubject()
+        {
+            try
+            {
+                var subject = subjects.Repository.GetAll(x => x.Name == listSubjects.SelectedItem.ToString()).FirstOrDefault();
+                subject.Name = subjectText.Text;
+                subjects.Repository.Update(subject);
+                subjects.Save();
+                listSubjects.Items[listSubjects.SelectedIndex] = subjectText.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error editing room");
+            }
+            finally
+            {
+                subjectText.Text = string.Empty;
+                edit = false;
+                AddSubject.Content = "Add";
+            }
+        }
+
+        private void AddSubjects()
+        {
+            try
+            {
+                subjects.Repository.Add(new Subject() { Name = subjectText.Text });
+                subjects.Save();
+                listSubjects.Items.Add(subjectText.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding room.");
+            }
+            finally
+            {
+                subjectText.Text = string.Empty;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LNU.Scheduler.Presentation"
         mc:Ignorable="d"
-        Title="SubjectManagerWindow"  Height="500" Width="600">
+        Title="SubjectManagerWindow"  Height="500" ResizeMode="NoResize" Width="600">
     <Grid Background="#FFB5C9DC">
         <Label Content="Subjects" HorizontalAlignment="Left" Margin="281,10,0,0" FontFamily="Comic Sans MS" VerticalAlignment="Top"/>
 
@@ -17,6 +17,7 @@
         <Button Content="Cancel" Click="CloseWindow" HorizontalAlignment="Left" FontFamily="Comic Sans MS" Margin="158,381,0,0" VerticalAlignment="Top" Width="75"/>
         <ListBox x:Name="listSubjects" Background="#FFB5C9DC" HorizontalAlignment="Left" Height="143" Margin="10,216,0,0" VerticalAlignment="Top" Width="314"/>
         <Button x:Name="deleteSubject" Click="deleteSubject_Click" Content="Delete" HorizontalAlignment="Left" Margin="376,242,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="editSubject" Click="editSubject_Click" Content="Edit" HorizontalAlignment="Left" Margin="376,308,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
