@@ -1,5 +1,6 @@
 ﻿using LNU.Scheduler.Contracts;
 using LNU.Scheduler.Models;
+using LNU.Scheduler.DataAccess;
 using System.Windows;
 
 namespace LNU.Scheduler.Presentation
@@ -9,18 +10,36 @@ namespace LNU.Scheduler.Presentation
     /// </summary>
     public partial class MainWindow : Window
     {
+        IUnitOfWork<Group> groups;
+        IUnitOfWork<Room> rooms;
         public MainWindow()
         {
+            groups = new UnitOfWork();
+            rooms = new UnitOfWork();
+            InitializeComponent();
+            selectGroup.IsEnabled = false;
+            foreach (var item in groups.Repository.GetAll(x => true))
+            {
+                groupList.Items.Add(item.Name);
+            }
         }
-
         public MainWindow(IUnitOfWork<Room> test)
         {
+            //groupList = new System.Windows.Controls.ListView();
+
             // TODO: remove test code
             //test.Repository.Add(new Room() {Number = 42});
-            //test.Save();           
+            //test.Save();
             // End
-
+            
+            
+            //groupList.Items.Refresh();
             InitializeComponent();
+            foreach (var item in test.Repository.GetAll(x => true))
+            {
+                groupList.Items.Add(item);
+            }
+
         }
 
         public void OpenScheduleWindow(object sender, RoutedEventArgs e)
@@ -51,6 +70,20 @@ namespace LNU.Scheduler.Presentation
         {
             var window = new GroupManagerWindow();
             window.Show();
+        }
+
+        private void groupList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            selectGroup.IsEnabled = true;
+        }
+
+        private void Window_Activated(object sender, System.EventArgs e)
+        {
+            groupList.Items.Clear();
+            foreach (var item in groups.Repository.GetAll(x => true))
+            {
+                groupList.Items.Add(item.Name);
+            }
         }
     }
 }

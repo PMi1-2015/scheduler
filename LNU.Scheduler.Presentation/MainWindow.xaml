@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LNU.Scheduler.Presentation"
         mc:Ignorable="d"
-        Title="MainWindow"  Height="500" Width="800">
+        Title="MainWindow" Activated="Window_Activated" ResizeMode="NoResize"  Height="500" Width="800">
     <Grid Background="#FFB5C9DC">
 
         <UniformGrid Rows="1" Columns="4" Height="50" Margin="0,0,0,419" Background="#FF505589">
@@ -14,18 +14,8 @@
             <Button Content="Subject Manager" Click="OpenSubjectManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
             <Button Content="Group Manager" Click="OpenGroupManagerWindow"  Background="#FF505589" BorderBrush="#FF09032E" FontSize="21.333" FontFamily="Comic Sans MS" />
         </UniformGrid>
-        <Grid HorizontalAlignment="Left" Height="200" Margin="250,150,0,0" VerticalAlignment="Top" Width="300">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="101*"/>
-                <ColumnDefinition Width="49*"/>
-            </Grid.ColumnDefinitions>
-            <RadioButton Content="PMi-32" HorizontalAlignment="Left" Margin="40,40,0,0" VerticalAlignment="Top" Height="30" Width="220" Grid.ColumnSpan="2" FontSize="21.333" FontFamily="Comic Sans MS"/>
-            <RadioButton Content="PMp-12" HorizontalAlignment="Left" Margin="40,80,0,0" VerticalAlignment="Top" Height="30" Width="220" Grid.ColumnSpan="2" FontSize="21.333" FontFamily="Comic Sans MS"/>
-            <RadioButton Content="PMi-31" HorizontalAlignment="Left" Margin="40,120,0,0" VerticalAlignment="Top" Height="30" Width="220" Grid.ColumnSpan="2" FontSize="21.333" FontFamily="Comic Sans MS"/>
-            <RadioButton Content="PMa-23" HorizontalAlignment="Left" Margin="40,160,0,0" VerticalAlignment="Top" Height="30" Width="220" Grid.ColumnSpan="2" FontSize="21.333" FontFamily="Comic Sans MS"/>
-            <ScrollBar x:Name="ScrollBar" HorizontalAlignment="Left" Margin="81,0,0,0" VerticalAlignment="Top" Height="200" Grid.Column="1"/>
-        </Grid>
         <Label Content="Select group" HorizontalAlignment="Left" Margin="316,71.53,0,0" VerticalAlignment="Top" Width="172" FontSize="26.667" FontFamily="Comic Sans MS"/>
-        <Button Content="Create Schedule" Click="OpenScheduleWindow" HorizontalAlignment="Left" Margin="316,389,0,0" VerticalAlignment="Top" Width="172" Height="44" FontFamily="Comic Sans MS" />
+        <Button x:Name="selectGroup" Content="Create Schedule" Click="OpenScheduleWindow" HorizontalAlignment="Left" Margin="316,389,0,0" VerticalAlignment="Top" Width="172" Height="44" FontFamily="Comic Sans MS" />
+        <ListBox x:Name="groupList" Background="#FFB5C9DC" HorizontalAlignment="Left" Height="146" Margin="292,211,0,0" VerticalAlignment="Top" Width="257" SelectionChanged="groupList_SelectionChanged"/>
     </Grid>
 </Window>

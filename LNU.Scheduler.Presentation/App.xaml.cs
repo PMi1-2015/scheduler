@@ -26,7 +26,7 @@ namespace LNU.Scheduler.Presentation
             var unitOfWork = new UnitOfWork();
             container.RegisterInstance<IUnitOfWork<Room>>(unitOfWork);
 
-            container.Resolve<MainWindow>();
+            //container.Resolve<MainWindow>();
         }
     }
 }
